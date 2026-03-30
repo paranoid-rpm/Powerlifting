@@ -1,19 +1,283 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Powerlifting Academy — Восстановление</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Железный конспект - Восстановление</title>
+    <meta
+      name="description"
+      content="Подробный раздел по восстановлению в пауэрлифтинге: сон, питание, стресс, делoad, маркеры усталости и практические алгоритмы."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="bg-orb orb-3"></div><div class="bg-orb orb-2"></div>
-    <header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html">Powerlifting Academy</a><button id="menuToggle" class="menu-toggle">☰</button><nav id="mainNav" class="main-nav"><a href="index.html">Главная</a><a href="theory.html">Теория</a><a href="technique.html">Техника</a><a href="programs.html">Программы</a><a class="active" href="recovery.html">Восстановление</a><a href="media.html">Видео и фото</a></nav></div></header>
-    <main class="page-main"><section class="page-hero"><div class="container"><p class="eyebrow">Раздел 4</p><h1>Восстановление, питание и здоровье</h1><p class="lead">Сильнее становится не тот, кто больше устал, а тот, кто лучше восстановился.</p></div></section>
-      <section class="section"><div class="container grid cards-2"><article class="card"><h3>Сон и режим</h3><ul><li>7.5–9 часов сна ежедневно.</li><li>Стабильное время подъёма и отбоя.</li><li>Минимум экранов перед сном.</li></ul></article><article class="card"><h3>Питание</h3><ul><li>Белок 1.6–2.2 г/кг.</li><li>Жиры 0.8–1.0 г/кг.</li><li>Углеводы — под объём тренинга.</li><li>Электролиты и гидратация.</li></ul></article></div></section>
-      <section class="section section-soft"><div class="container"><div class="card"><h3>Профилактика травм</h3><p>Разминка, ступенчатый разогрев, контроль техники, работа над мобильностью голеностопа/таза/грудного отдела и регулярная лёгкая ОФП заметно снижают риски.</p></div></div></section>
+  <body data-page="recovery">
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="bg-orb orb-3"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="index.html">Железный конспект</a>
+        <button id="menuToggle" class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+        <nav id="mainNav" class="main-nav">
+          <a href="index.html">Главная</a>
+          <a href="theory.html">Теория</a>
+          <a href="technique.html">Техника</a>
+          <a href="programs.html">Программы</a>
+          <a class="active" href="recovery.html">Восстановление</a>
+          <a href="courses.html">Курсы</a>
+          <a href="media.html">Видео и фото</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <div class="container split-grid">
+          <div class="hero-main reveal">
+            <p class="eyebrow">РАЗДЕЛ 4 · ВОССТАНОВЛЕНИЕ</p>
+            <h1>Восстановление не делает тебя мягким, оно даёт тебе силу</h1>
+            <p class="lead">
+              Много кто относится к восстановлению как к скучному приложению к программе. На деле это один из её главных
+              рычагов. Можно идеально собрать цикл, но если сон развален, питание рваное, стресс постоянный, а разгрузка
+              включается только после аварии, прогресс быстро упрётся в стену. Здесь всё по делу: что отслеживать, что
+              делать при накопленной усталости и как не путать лень с реальным утомлением.
+            </p>
+          </div>
+          <aside class="hero-side reveal">
+            <span class="side-label">ПРОСТАЯ ПРАВДА</span>
+            <h2>Организм не обязан терпеть всё подряд</h2>
+            <p>
+              Штанга может нравиться сколько угодно, но ткани, нервная система и голова всё равно работают по своим
+              правилам. Если ты системно недосыпаешь, питаешься как попало и живёшь в постоянном фоне напряжения, то рано
+              или поздно тренировки начнут оплачиваться слишком дорого.
+            </p>
+            <ul class="feature-list">
+              <li>Сон и еда так же важны, как проценты и подходы.</li>
+              <li>Разгрузка — элемент программы, а не признание поражения.</li>
+              <li>Чем выше уровень атлета, тем дороже обходятся бытовые косяки.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ОСНОВНЫЕ ОПОРЫ</p>
+            <h2>Четыре столба нормального восстановления</h2>
+            <p class="lead">
+              Всё остальное — добавки, гаджеты и мелкие улучшения. Если базовые вещи не стоят, чудес не будет.
+            </p>
+          </div>
+
+          <div class="grid cards-4">
+            <article class="card reveal gradient-a">
+              <h3>Сон</h3>
+              <p>
+                7.5-9 часов — это не избалованность, а рабочая база. Стабильное время подъёма, тёмная прохладная комната,
+                меньше экрана перед сном, понятный ритм недели. Если сон постоянно рваный, тяжёлые сессии очень быстро
+                станут ощущаться тяжелее, чем должны.
+              </p>
+            </article>
+            <article class="card reveal gradient-b">
+              <h3>Питание</h3>
+              <p>
+                Белок, углеводы и вода — это не скучная диетология, а топливо для восстановления и работы. Тяжёлые недели
+                особенно чувствительны к провалам по калориям, электролитам и регулярности приёмов пищи.
+              </p>
+            </article>
+            <article class="card reveal gradient-c">
+              <h3>Стресс</h3>
+              <p>
+                Организм не очень различает тренировочный и бытовой стресс. Если работа, учёба, переезды или личные
+                качели жрут тебя каждый день, программа должна это учитывать, а не притворяться, что ты живёшь в вакууме.
+              </p>
+            </article>
+            <article class="card reveal gradient-d">
+              <h3>Разгрузка</h3>
+              <p>
+                Разгрузочная неделя нужна, чтобы снова начать адаптироваться, а не продолжать тонуть в накопленной
+                усталости. Убираешь часть объёма, оставляешь паттерны движения и возвращаешь себе свежесть.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container grid cards-2">
+          <article class="card reveal">
+            <h3>Что отслеживать, чтобы не проспать перегруз</h3>
+            <ol>
+              <li>Качество сна: не только сколько часов спал, но и насколько просыпаешься разбитым.</li>
+              <li>Утренний пульс и общее чувство бодрости на фоне привычной нагрузки.</li>
+              <li>Готовность к тренировке: есть ли ощущение собранности или ты постоянно вялый и расфокусированный.</li>
+              <li>Скорость штанги на стандартных весах: если она резко упала, это важный сигнал.</li>
+              <li>Аппетит, настроение, раздражительность и желание тренироваться — это тоже маркеры, а не ерунда.</li>
+            </ol>
+          </article>
+          <article class="card reveal">
+            <h3>Что делать, если усталость уже накопилась</h3>
+            <ul>
+              <li>Снизить общий объём на 20-35% на ближайшие 4-7 дней.</li>
+              <li>Оставить техничный контакт со штангой, чтобы не терять движение.</li>
+              <li>Убрать необязательные подвиги: лишнее кардио, бессмысленную подсобку, слишком частые тяжёлые синглы.</li>
+              <li>Усилить сон и регулярность питания, а не пытаться «перетерпеть» на кофеине.</li>
+              <li>Вернуться к росту только после нормализации маркеров, а не по календарю из упрямства.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">РЕЖИМ ПО СИТУАЦИИ</p>
+            <h2>Что делать до, после и между тренировками</h2>
+            <p class="lead">
+              Восстановление строится не одной волшебной процедурой, а набором понятных действий, которые повторяются из
+              недели в неделю.
+            </p>
+          </div>
+
+          <div class="grid cards-3">
+            <article class="card reveal">
+              <h3>Перед тяжёлой сессией</h3>
+              <ul>
+                <li>Нормально поесть за несколько часов до тренировки и не заходить в зал пустым.</li>
+                <li>Проверить уровень воды и соли, особенно если потеешь сильно.</li>
+                <li>Не забивать голову лишней суетой: тяжёлые веса любят ясность.</li>
+                <li>Если уже с утра чувствуешь себя разбитым, пересмотри задачу тренировки заранее.</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <h3>Сразу после тренировки</h3>
+              <ul>
+                <li>Закрыть приём пищи и жидкости, а не откладывать на полдня.</li>
+                <li>Коротко записать, что сработало и где полезла усталость.</li>
+                <li>Не добивать себя «на характере», если основная работа уже сделана.</li>
+                <li>Стараться сохранить ритм дня, а не уходить в хаос под предлогом тяжёлой тренировки.</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <h3>В выходной день</h3>
+              <ul>
+                <li>Лёгкая активность помогает лучше, чем полное приклеивание к дивану.</li>
+                <li>Нормальный шаг, прогулка, лёгкая мобилизация и спокойный быт часто дают больше, чем «секретные методы».</li>
+                <li>Выходной — хороший момент честно оценить самочувствие до того, как программа упрётся в стену.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ВИДЕО ПО ВОССТАНОВЛЕНИЮ</p>
+            <h2>Материалы, которые помогают собрать бытовую сторону спорта</h2>
+            <p class="lead">
+              Здесь всё, что обычно кажется «вторичным», но потом внезапно решает судьбу целого блока подготовки.
+            </p>
+          </div>
+
+          <div class="video-grid">
+            <article class="video-card reveal"><h3>Сон и спорт</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Питание силовика</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/p2OPUi4xGrM" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Разгрузочные недели</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Uv_DKDl7EjA" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Управление стрессом</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vthMCtgVtFw" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Маркеры готовности</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wYREQkVtvEc" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Восстановление между сессиями</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/FWizDhYjGsc" allowfullscreen></iframe></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ФОТО-КОНТЕКСТ</p>
+            <h2>Восстановление тоже имеет свой визуальный язык</h2>
+            <p class="lead">
+              Когда смотришь на подготовку шире, становится ясно: результат строится не только в стойке и на лавке, но и в
+              кухне, спальне, режиме дня и общем состоянии между тренировками.
+            </p>
+          </div>
+
+          <div class="image-grid">
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=80" alt="Сон" /><figcaption>Сон — первый фильтр, который либо поддерживает прогресс, либо тихо душит его.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1400&q=80" alt="Питание" /><figcaption>Еда нужна не только для цифры на весах, но и для качества тяжёлой работы.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&w=1400&q=80" alt="Мобилизация" /><figcaption>Лёгкое движение в восстановительные дни часто полезнее полной неподвижности.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=1400&q=80" alt="Вода" /><figcaption>Гидратация звучит скучно, но под тяжёлой штангой становится очень заметной.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">FAQ</p>
+            <h2>Частые вопросы без лишней романтики</h2>
+          </div>
+          <div class="faq-list">
+            <details class="card reveal">
+              <summary>Как понять, что разгрузка нужна уже сейчас?</summary>
+              <p>Когда падает скорость на привычных весах, проседает сон, растёт раздражительность и тяжесть подходов на ровном месте. Чем дольше игнорируешь сигналы, тем дороже потом выходить из ямы.</p>
+            </details>
+            <details class="card reveal">
+              <summary>Можно ли компенсировать недосып кофеином?</summary>
+              <p>Частично бодрость ты поднимешь, но адаптацию не купишь. Кофеин может помочь провести тренировку, но не способен заменить восстановительный эффект сна.</p>
+            </details>
+            <details class="card reveal">
+              <summary>Нужно ли делать кардио в силовом цикле?</summary>
+              <p>Да, если оно лёгкое и стоит на своём месте. Умеренное кардио улучшает общую выносливость и помогает переносить объём, если не превращается в отдельный вид страдания.</p>
+            </details>
+            <details class="card reveal">
+              <summary>Стоит ли полностью убирать штангу на разгрузке?</summary>
+              <p>Обычно нет. Лёгкий контакт с движением помогает сохранить моторный навык. Просто характер работы должен быть техничным и заметно менее утомительным.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid cards-2">
+          <article class="card reveal">
+            <h3>Минимальный ежедневный чек-лист</h3>
+            <ul>
+              <li>Сколько спал и насколько проснулся собранным.</li>
+              <li>Было ли нормальное питание до и после тренировки.</li>
+              <li>Есть ли заметный фон бытового стресса прямо сейчас.</li>
+              <li>Нужна ли сегодня полноценная тяжёлая работа или лучше отдать приоритет качеству движения.</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Что важно не перепутать</h3>
+            <p>
+              Восстановление — это не бесконечный комфорт. Это грамотная организация ресурсов, чтобы тяжёлая работа была
+              возможна регулярно. Если ты постоянно выбираешь только комфорт, не будет прогресса. Но если постоянно
+              игнорируешь сигналы организма, прогресс тоже быстро закончится. Нужен не перекос, а система.
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer"><div class="container footer-wrap"><p>Powerlifting Academy</p><a href="media.html">Далее: медиа</a></div></footer><script src="script.js"></script>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Железный конспект</p>
+        <a href="media.html">Далее: медиатека</a>
+      </div>
+    </footer>
+
+    <button id="toTopBtn" class="to-top" aria-label="Наверх">↑</button>
+    <div id="lightbox" class="lightbox" aria-hidden="true"><img id="lightboxImg" alt="preview" /></div>
+    <script src="script.js"></script>
   </body>
 </html>

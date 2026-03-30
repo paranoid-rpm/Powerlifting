@@ -1,32 +1,195 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Powerlifting Academy — Видео и фото</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Железный конспект - Медиатека</title>
+    <meta
+      name="description"
+      content="Большая медиатека по пауэрлифтингу: фильтруемые видео, галерея референсов и подсказки, как смотреть материалы с пользой."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="bg-orb orb-1"></div><div class="bg-orb orb-3"></div>
-    <header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html">Powerlifting Academy</a><button id="menuToggle" class="menu-toggle">☰</button><nav id="mainNav" class="main-nav"><a href="index.html">Главная</a><a href="theory.html">Теория</a><a href="technique.html">Техника</a><a href="programs.html">Программы</a><a href="recovery.html">Восстановление</a><a class="active" href="media.html">Видео и фото</a></nav></div></header>
-    <main class="page-main"><section class="page-hero"><div class="container"><p class="eyebrow">Раздел 5</p><h1>Медиатека: видео и визуальные референсы</h1><p class="lead">Больше обучающих видео для анализа техники и соревновательной подготовки.</p></div></section>
-      <section class="section"><div class="container"><div class="video-grid">
-        <article class="video-card"><h3>Присед: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/aclHkVaku9U" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Жим: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Тяга: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/p2OPUi4xGrM" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Присед: детали</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Uv_DKDl7EjA" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Жим: ошибки</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vthMCtgVtFw" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Тяга: разбор</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wYREQkVtvEc" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Подготовка к старту</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/J8l5v8MRTvA" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Психология подхода</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/FWizDhYjGsc" allowfullscreen></iframe></div></article>
+  <body data-page="media">
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="index.html">Железный конспект</a>
+        <button id="menuToggle" class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+        <nav id="mainNav" class="main-nav">
+          <a href="index.html">Главная</a>
+          <a href="theory.html">Теория</a>
+          <a href="technique.html">Техника</a>
+          <a href="programs.html">Программы</a>
+          <a href="recovery.html">Восстановление</a>
+          <a href="courses.html">Курсы</a>
+          <a class="active" href="media.html">Видео и фото</a>
+        </nav>
       </div>
-      <div class="image-grid">
-        <figure class="image-card"><img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1200&q=80" alt="Жим лёжа" /><figcaption>Стартовая фиксация в жиме.</figcaption></figure>
-        <figure class="image-card"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Силовая тренировка" /><figcaption>Подготовка к тяжёлому подходу.</figcaption></figure>
-        <figure class="image-card"><img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=1200&q=80" alt="Становая тяга" /><figcaption>Контроль спины и траектории.</figcaption></figure>
-      </div></div></section>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <div class="container split-grid">
+          <div class="hero-main reveal">
+            <p class="eyebrow">РАЗДЕЛ 6 · МЕДИАТЕКА</p>
+            <h1>Смотри не просто контент, а материал для разбора</h1>
+            <p class="lead">
+              Медиатека нужна не для того, чтобы залипнуть в красивые подходы. Она нужна, чтобы учиться видеть технику,
+              слабые фазы, ритуалы подготовки, реакцию на команды и контекст тяжёлой работы. Поэтому здесь можно фильтровать
+              ролики по темам и разбирать фото как референсы, а не как фон.
+            </p>
+          </div>
+          <aside class="hero-side reveal">
+            <span class="side-label">КАК ИСПОЛЬЗОВАТЬ</span>
+            <h2>Смотри с вопросом, а не просто глазами</h2>
+            <p>
+              Открывая видео или фото, держи в голове конкретную задачу. Например: где у атлета находится центр опоры,
+              как идёт траектория, что происходит в переходе через слабую фазу, не разваливается ли корпус под утомлением.
+              Тогда медиатека реально работает на твой прогресс.
+            </p>
+            <ul class="feature-list">
+              <li>Сравнивай чужие движения со своими видео, а не оценивай всё только на ощущениях.</li>
+              <li>Останавливай ролики на ключевых фазах: старт, низ, переход, локаут.</li>
+              <li>Сохраняй материалы под конкретные проблемы, а не просто «на потом».</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ФИЛЬТРЫ</p>
+            <h2>Выбирай, что именно сейчас разбираешь</h2>
+            <p class="lead">
+              Если сегодня работаешь над приседом, не надо распыляться на всё подряд. Выбери категорию, посмотри ролики с
+              конкретной задачей и сопоставь увиденное со своими последними сетами.
+            </p>
+          </div>
+
+          <div class="tab-controls reveal">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="squat">Присед</button>
+            <button class="filter-btn" data-filter="bench">Жим</button>
+            <button class="filter-btn" data-filter="deadlift">Тяга</button>
+            <button class="filter-btn" data-filter="mindset">Подготовка</button>
+          </div>
+
+          <div class="video-grid">
+            <article class="video-card reveal" data-cat="squat"><h3>Присед: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/aclHkVaku9U" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="bench"><h3>Жим: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="deadlift"><h3>Тяга: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/p2OPUi4xGrM" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="squat"><h3>Присед: мобильность и низ</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Uv_DKDl7EjA" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="bench"><h3>Жим: частые ошибки</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vthMCtgVtFw" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="deadlift"><h3>Тяга: разбор по фазам</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wYREQkVtvEc" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="mindset"><h3>Психология старта</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/FWizDhYjGsc" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="mindset"><h3>Настрой перед попыткой</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/FWizDhYjGsc" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="squat"><h3>Темповый присед</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Uv_DKDl7EjA" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="bench"><h3>Пауза и лег-драйв в жиме</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vthMCtgVtFw" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="deadlift"><h3>Дефицит и старт тяги</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wYREQkVtvEc" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal" data-cat="mindset"><h3>Разминка на соревнованиях</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/p2OPUi4xGrM" allowfullscreen></iframe></div></article>
+          </div>
+
+          <p id="noResults" class="no-results">Для этой категории пока нет роликов.</p>
+
+          <article class="media-highlight reveal">
+            <h3>Что смотреть в роликах в первую очередь</h3>
+            <p class="muted">
+              Не оценивай подъём по общему ощущению «нормально / не нормально». Ищи конкретику: старт, дыхание, траекторию,
+              контроль слабой фазы, реакцию на утомление и качество фиксации. Тогда медиатека станет учебником, а не шумом.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container grid cards-2">
+          <article class="card reveal">
+            <h3>Как разбирать видео с пользой</h3>
+            <ol>
+              <li>Сначала смотри весь сет целиком и отмечай общий характер движения.</li>
+              <li>Потом останавливай на ключевых точках: старт, нижняя фаза, переход, фиксация.</li>
+              <li>Сравни увиденное с одним своим видео из той же категории.</li>
+              <li>Выпиши одну правку, которую проверишь на следующей тренировке.</li>
+            </ol>
+          </article>
+          <article class="card reveal">
+            <h3>Как собирать свою библиотеку референсов</h3>
+            <ul>
+              <li>Делай отдельные подборки под каждую проблему: низ приседа, пауза в жиме, старт тяги.</li>
+              <li>Не сохраняй всё подряд: лучше 3 точных референса, чем 40 роликов без понимания, зачем они тебе.</li>
+              <li>Возвращайся к одним и тем же материалам после нескольких недель, чтобы видеть прогресс взгляда.</li>
+              <li>Сочетай видео и фото: движение лучше видно в динамике, а позиции удобно разбирать на стоп-кадрах.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ГАЛЕРЕЯ</p>
+            <h2>Фото-референсы для насмотренности и сравнения</h2>
+            <p class="lead">
+              Картинки здесь тоже не ради красоты. По ним удобно смотреть стойку, опору, ритуалы перед подходом, общую
+              собранность тела и контекст тяжёлой работы в зале или на старте.
+            </p>
+          </div>
+
+          <div class="image-grid">
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1200&q=80" alt="Жим" /><figcaption>Фиксация в жиме говорит о позиции не меньше, чем сам отрыв от груди.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Тренировка" /><figcaption>Подход к тяжёлому сету начинается ещё до контакта со штангой.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=1200&q=80" alt="Тяга" /><figcaption>Тяга почти всегда выдаёт качество старта по положению корпуса и линии грифа.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=1200&q=80" alt="Присед" /><figcaption>Нижняя точка приседа хорошо показывает, есть ли у тебя реальная опора.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=1200&q=80" alt="Зал" /><figcaption>Тяжёлый зал хорош тем, что быстро выводит на поверхность все слабые места.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80" alt="Стойка" /><figcaption>Постановка перед съёмом штанги часто определяет, как пойдёт весь подход.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1200&q=80" alt="Скорость" /><figcaption>Скоростная работа — удобный маркер того, насколько живой и управляемой остаётся техника.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&w=1200&q=80" alt="Подготовка" /><figcaption>У каждого сильного подхода есть момент тишины и сборки перед началом.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80" alt="Силовой атлет" /><figcaption>Корпус и спина держат намного больше результата, чем многим хочется признавать.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1517964603305-11c0f6f66012?auto=format&fit=crop&w=1200&q=80" alt="Разминка" /><figcaption>Разминка нужна не для галочки, а чтобы вход в рабочий вес был логичным и спокойным.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80" alt="Техника" /><figcaption>Хорошая техника часто выглядит скучнее плохой, зато переносится на тяжёлые проценты.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=1200&q=80" alt="Штанга и атлет" /><figcaption>Концентрация перед повтором часто заметнее во взгляде и ритме, чем в любой внешней позе.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container grid cards-3">
+          <article class="card reveal gradient-a">
+            <h3>Плейлист по приседу</h3>
+            <p>Сохраняй сюда всё, что касается низа, выхода из ямы, опоры стопы и координации корпуса под утомлением.</p>
+          </article>
+          <article class="card reveal gradient-b">
+            <h3>Плейлист по жиму</h3>
+            <p>Полезно собирать отдельно материалы по паузе, касанию, лег-драйву и удержанию верхней позиции на тяжёлых сетах.</p>
+          </article>
+          <article class="card reveal gradient-c">
+            <h3>Плейлист по тяге и настрою</h3>
+            <p>Объедини сюда старт тяги, локаут и ролики по соревновательной подготовке, чтобы видеть картину целиком.</p>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer"><div class="container footer-wrap"><p>Powerlifting Academy</p><a href="index.html">На главную</a></div></footer><script src="script.js"></script>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Железный конспект</p>
+        <a href="index.html">На главную</a>
+      </div>
+    </footer>
+
+    <button id="toTopBtn" class="to-top" aria-label="Наверх">↑</button>
+    <div id="lightbox" class="lightbox" aria-hidden="true"><img id="lightboxImg" alt="preview" /></div>
+    <script src="script.js"></script>
   </body>
 </html>

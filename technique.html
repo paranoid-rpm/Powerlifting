@@ -1,19 +1,258 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Powerlifting Academy — Техника</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Железный конспект - Техника движений</title>
+    <meta
+      name="description"
+      content="Подробный технический раздел по приседу, жиму и тяге: фазы движения, ошибки, подсказки, видеоанализ и чек-листы."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="bg-orb orb-2"></div><div class="bg-orb orb-3"></div>
-    <header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html">Powerlifting Academy</a><button id="menuToggle" class="menu-toggle">☰</button><nav id="mainNav" class="main-nav"><a href="index.html">Главная</a><a href="theory.html">Теория</a><a class="active" href="technique.html">Техника</a><a href="programs.html">Программы</a><a href="recovery.html">Восстановление</a><a href="media.html">Видео и фото</a></nav></div></header>
-    <main class="page-main"><section class="page-hero"><div class="container"><p class="eyebrow">Раздел 2</p><h1>Техника трёх соревновательных движений</h1><p class="lead">Пошаговые схемы, чек-листы и распространённые ошибки.</p></div></section>
-      <section class="section"><div class="container grid cards-3"><article class="card"><h3>Присед</h3><ul><li>Брейсинг на 360° и плотная «полка».</li><li>Колени следуют за носками.</li><li>Стабильная середина стопы.</li><li>Синхронный подъём таза и груди.</li></ul></article><article class="card"><h3>Жим лёжа</h3><ul><li>Сведение лопаток и упор ногами.</li><li>Контролируемое касание груди.</li><li>J-траектория в фазе выжима.</li><li>Стабильный хват и запястья.</li></ul></article><article class="card"><h3>Становая тяга</h3><ul><li>Гриф над серединой стопы.</li><li>Убрать люфт до старта.</li><li>Включить широчайшие.</li><li>Локаут без переразгибания.</li></ul></article></div></section>
-      <section class="section section-soft"><div class="container"><h2>Чек-лист перед тяжёлым подходом</h2><div class="card"><p>1) Дыхание и брейсинг, 2) стартовая позиция, 3) визуальный фокус, 4) команда на старт, 5) жёсткое завершение.</p></div></div></section>
+  <body data-page="technique">
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="index.html">Железный конспект</a>
+        <button id="menuToggle" class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+        <nav id="mainNav" class="main-nav">
+          <a href="index.html">Главная</a>
+          <a href="theory.html">Теория</a>
+          <a class="active" href="technique.html">Техника</a>
+          <a href="programs.html">Программы</a>
+          <a href="recovery.html">Восстановление</a>
+          <a href="courses.html">Курсы</a>
+          <a href="media.html">Видео и фото</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <div class="container split-grid">
+          <div class="hero-main reveal">
+            <p class="eyebrow">РАЗДЕЛ 2 · ТЕХНИКА</p>
+            <h1>Техника без позы: как двигать штангу чисто и сильно</h1>
+            <p class="lead">
+              Техника в пауэрлифтинге нужна не ради красивого видео. Она нужна, чтобы сила не утекала в мусорные
+              траектории. Если корпус складывается, касание гуляет, а старт в тяге срывается руками, ты теряешь не только
+              вес на штанге, но и устойчивость прогресса. Ниже всё разложено по фазам, подсказкам и типовым косякам.
+            </p>
+          </div>
+          <aside class="hero-side reveal">
+            <span class="side-label">ГЛАВНОЕ ПРАВИЛО</span>
+            <h2>Одна тренировка = один основной фокус</h2>
+            <p>
+              Худшая ошибка в технике — пытаться исправить всё сразу. Снял видео, нашёл один главный сбой, выбрал одну
+              подсказку и одну вариацию для коррекции. Всё. Иначе мозг получает кашу, а движение остаётся прежним.
+            </p>
+            <ul class="feature-list">
+              <li>Сначала исправляй то, что сильнее всего ломает подъём.</li>
+              <li>Не путай ощущение «непривычно» с ощущением «правильно».</li>
+              <li>Тяжёлый сет должен быть продолжением техники, а не её отменой.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid cards-3">
+          <article class="card reveal gradient-a">
+            <h3>Присед: опора и корпус</h3>
+            <p>
+              Стопа полностью прижата к полу, брейсинг собран до снятия, колени открываются по линии носка, таз и грудная
+              клетка держат одну систему. В хорошем приседе корпус не воюет с ногами, а помогает им передавать силу в пол.
+            </p>
+          </article>
+          <article class="card reveal gradient-b">
+            <h3>Жим: позиция и траектория</h3>
+            <p>
+              Лопатки сведены и опущены, ноги постоянно давят в пол, касание предсказуемое, штанга идёт по понятной
+              J-траектории, а не болтается над грудью. Стабильный жим начинается ещё до снятия грифа со стоек.
+            </p>
+          </article>
+          <article class="card reveal gradient-c">
+            <h3>Тяга: натяжение и линия грифа</h3>
+            <p>
+              Штанга стоит над серединой стопы, люфт выбран до старта, корпус натянут, широчайшие включены, а движение
+              начинается ногами. Чем ближе гриф к телу, тем меньше лишнего момента, который разваливает тягу.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container grid cards-3">
+          <article class="card reveal">
+            <h3>Присед по фазам</h3>
+            <ul>
+              <li>Снятие: не расслабляй живот и не вываливай грудь вперёд раньше времени.</li>
+              <li>Спуск: колени и таз двигаются согласованно, а не по очереди.</li>
+              <li>Нижняя точка: сохраняй давление стопы и не теряй спину ради глубины любой ценой.</li>
+              <li>Подъём: думай о давлении в пол и сохранении корпуса, а не о резком рывке тазом.</li>
+              <li>Финиш: встал, зафиксировал, не переигрывай переразгибанием.</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Жим по фазам</h3>
+            <ul>
+              <li>Старт: снял штангу, но не потерял верх спины и позицию плеч.</li>
+              <li>Опускание: локти под контролем, штанга движется в предсказуемую точку касания.</li>
+              <li>Пауза: не разваливай грудь, не отпускай ноги и не теряй напряжение.</li>
+              <li>Жим: сначала толкают ноги и корпус сохраняет мост, потом дорабатывают грудь и трицепс.</li>
+              <li>Фиксация: верх не должен быть болтающимся, позиция остаётся собранной.</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Тяга по фазам</h3>
+            <ul>
+              <li>Настройка: гриф близко, плечи и таз заняли рабочую стартовую высоту.</li>
+              <li>Выбор люфта: натяни систему до отрыва, чтобы не дёргать гриф из мёртвого состояния.</li>
+              <li>Старт: думай «толкай пол», а не «дёрни руками».</li>
+              <li>Проход колен: держи штангу близко к телу и не давай ей отлетать вперёд.</li>
+              <li>Локаут: доработай ягодицы и стой нейтрально, не заваливаясь назад.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid cards-2">
+          <article class="card reveal gradient-a">
+            <h3>Самые частые технические косяки</h3>
+            <ol>
+              <li>Потеря брейсинга уже в начале движения, из-за чего вес начинает гулять как хочет.</li>
+              <li>Смещение давления на носок или пятку вместо ровной опоры через всю стопу.</li>
+              <li>Попытка встать тазом отдельно от корпуса в приседе.</li>
+              <li>Плавающее касание и потеря ног в жиме на тяжёлых весах.</li>
+              <li>Отрыв штанги от голени и округление спины в старте тяги.</li>
+              <li>Слишком много подсказок в голове одновременно, из-за чего сет превращается в сумбур.</li>
+            </ol>
+          </article>
+          <article class="card reveal gradient-b">
+            <h3>Как корректировать по уму</h3>
+            <ul>
+              <li>Снизь вес до того уровня, где движение снова воспроизводится без хаоса.</li>
+              <li>Выбери одну главную подсказку, а не десять слов перед каждым повтором.</li>
+              <li>Подбери вариацию, которая подчёркивает слабую фазу: пауза, темп, дефицит, блоки.</li>
+              <li>Снимай тяжёлые сеты сбоку и под 45 градусов, чтобы видеть и позицию, и траекторию.</li>
+              <li>Проверь, не разваливается ли техника просто потому, что объём или усталость вышли из-под контроля.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container grid cards-2">
+          <article class="card reveal">
+            <h3>Протокол видеоанализа</h3>
+            <ol>
+              <li>Снимай один и тот же ракурс несколько недель подряд, чтобы сравнение было честным.</li>
+              <li>Смотри первый и последний повтор отдельно: часто в конце вылезает то, чего не видно в начале.</li>
+              <li>Ищи не только ошибку, но и момент, где она впервые появляется.</li>
+              <li>Спрашивай себя: проблема в технике, силе слабой фазы или накопленной усталости?</li>
+              <li>На следующей тренировке проверяй одну правку, а не переписывай всё движение заново.</li>
+            </ol>
+          </article>
+          <article class="card reveal">
+            <h3>Подсказки, которые реально работают</h3>
+            <ul>
+              <li>Присед: «вдохнул, закрылся, толкай пол, держи рёбра и таз одной системой».</li>
+              <li>Жим: «лопатки в карман, ноги в пол, касание под контролем, толкай штангу назад и вверх».</li>
+              <li>Тяга: «натяни гриф, подбери себя к штанге, толкни пол, держи штангу на себе».</li>
+              <li>Общее правило: хорошая подсказка короткая, телесная и не требует внутреннего монолога на весь сет.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ТЕХНИЧЕСКАЯ ВИДЕОБИБЛИОТЕКА</p>
+            <h2>Материал для сравнения со своими сетами</h2>
+            <p class="lead">
+              Видео лучше смотреть с паузами: ставь на стоп-кадр старт, низ, переход через слабую точку и фиксацию. Так
+              ты заметишь траекторию и позицию, а не просто общее впечатление от подъёма.
+            </p>
+          </div>
+
+          <div class="video-grid">
+            <article class="video-card reveal"><h3>Присед: техника</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/FWizDhYjGsc" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Жим: техника</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/aclHkVaku9U" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Тяга: техника</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Паузы и темп</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/p2OPUi4xGrM" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Команды на помосте</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wYREQkVtvEc" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Разбор ошибок</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Uv_DKDl7EjA" allowfullscreen></iframe></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ФОТО-РЕФЕРЕНСЫ</p>
+            <h2>Позиции и контекст в кадре</h2>
+            <p class="lead">
+              В фотоматериалах полезно смотреть на опору, линию корпуса, настройку перед попыткой и то, как атлет держит
+              напряжение между фазами. Чем больше насмотренность, тем легче считывать свои же косяки на видео.
+            </p>
+          </div>
+
+          <div class="image-grid">
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=80" alt="Силовая техника" /><figcaption>Хороший старт начинается ещё до первого сантиметра движения.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1400&q=80" alt="Жим лежа" /><figcaption>В жиме особенно важно не распускать позицию после снятия штанги.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=1400&q=80" alt="Тяга" /><figcaption>Траектория тяги почти всегда выдаёт, насколько хорошо собран старт.</figcaption></figure>
+            <figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=1400&q=80" alt="Присед" /><figcaption>Низ приседа — место, где видно, удержал ли ты систему или уже начал рассыпаться.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid cards-2">
+          <article class="card reveal">
+            <h3>Чек-лист перед рабочим сетом</h3>
+            <div class="check-grid">
+              <label><input type="checkbox" /> Опора стопы или ног в жиме задана до старта.</label>
+              <label><input type="checkbox" /> Брейсинг и дыхание подготовлены заранее.</label>
+              <label><input type="checkbox" /> Понимаю одну главную подсказку на этот сет.</label>
+              <label><input type="checkbox" /> Траектория и точка касания мысленно заданы.</label>
+              <label><input type="checkbox" /> Камера стоит так, чтобы потом можно было честно посмотреть подход.</label>
+              <label><input type="checkbox" /> Цель сета ясна: техника, объём, скорость или тяжёлый стимул.</label>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3>Что важно помнить под усталостью</h3>
+            <p>
+              Усталость почти всегда делает одни и те же вещи: уменьшает терпение в нижней фазе, ломает корпус и заставляет
+              ускоряться там, где нужна собранность. Поэтому не жди, что техника сама собой сохранится на фоне тяжёлой
+              недели. Закладывай это заранее: снижай лишний объём, оставляй понятные подсказки и вовремя режь рабочий
+              вес, если движение перестало быть управляемым.
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer"><div class="container footer-wrap"><p>Powerlifting Academy</p><a href="programs.html">Далее: программы</a></div></footer><script src="script.js"></script>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Железный конспект</p>
+        <a href="programs.html">Далее: программы</a>
+      </div>
+    </footer>
+
+    <button id="toTopBtn" class="to-top" aria-label="Наверх">↑</button>
+    <div id="lightbox" class="lightbox" aria-hidden="true"><img id="lightboxImg" alt="preview" /></div>
+    <script src="script.js"></script>
   </body>
 </html>

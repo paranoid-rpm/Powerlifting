@@ -1,19 +1,327 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Powerlifting Academy — Программы</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Железный конспект - Программы и периодизация</title>
+    <meta
+      name="description"
+      content="Подробный раздел по программированию в пауэрлифтинге: блоки, микроциклы, авто-регуляция, подводка, делoad и выбор попыток."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="bg-orb orb-1"></div><div class="bg-orb orb-2"></div>
-    <header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html">Powerlifting Academy</a><button id="menuToggle" class="menu-toggle">☰</button><nav id="mainNav" class="main-nav"><a href="index.html">Главная</a><a href="theory.html">Теория</a><a href="technique.html">Техника</a><a class="active" href="programs.html">Программы</a><a href="recovery.html">Восстановление</a><a href="media.html">Видео и фото</a></nav></div></header>
-    <main class="page-main"><section class="page-hero"><div class="container"><p class="eyebrow">Раздел 3</p><h1>Периодизация и шаблоны программ</h1><p class="lead">Подготовка от базового накопления до соревновательного пика.</p></div></section>
-      <section class="section"><div class="container"><div class="timeline"><div><h3>1–4 недели</h3><p>Объём 60–75%, рост техники и мышечной базы.</p></div><div><h3>5–8 недели</h3><p>Интенсификация 75–87%, акцент на силе.</p></div><div><h3>9–11 недели</h3><p>Пикирование 85–95%, одиночные подходы.</p></div><div><h3>12 неделя</h3><p>Тейпер, снижение утомления перед стартом.</p></div></div></div></section>
-      <section class="section section-soft"><div class="container grid cards-2"><article class="card"><h3>Пример недели (4 дня)</h3><ul><li>Д1: тяжёлый присед + жим объём.</li><li>Д2: тяга тяжёлая + задняя цепь.</li><li>Д3: жим тяжёлый + паузный присед.</li><li>Д4: вариативная тяга + ГПП.</li></ul></article><article class="card"><h3>RPE-регуляция</h3><p>Если день тяжёлый по самочувствию — снижай вес на 2.5–7.5% и сохраняй техническое качество. Цель — стабильная серия продуктивных недель.</p></article></div></div></section>
+  <body data-page="programs">
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="index.html">Железный конспект</a>
+        <button id="menuToggle" class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+        <nav id="mainNav" class="main-nav">
+          <a href="index.html">Главная</a>
+          <a href="theory.html">Теория</a>
+          <a href="technique.html">Техника</a>
+          <a class="active" href="programs.html">Программы</a>
+          <a href="recovery.html">Восстановление</a>
+          <a href="courses.html">Курсы</a>
+          <a href="media.html">Видео и фото</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <div class="container split-grid">
+          <div class="hero-main reveal">
+            <p class="eyebrow">РАЗДЕЛ 3 · ПРОГРАММЫ</p>
+            <h1>Хорошая программа не впечатляет, она работает</h1>
+            <p class="lead">
+              Составить план — это не значит просто раскидать тяжёлые и лёгкие дни по календарю. Нужно понимать, какой
+              этап цикла ты сейчас строишь, как распределяется объём, откуда берётся утомление, когда поднимать
+              интенсивность и когда вовремя резать нагрузку. В этом разделе весь каркас собран в одну систему.
+            </p>
+          </div>
+          <aside class="hero-side reveal">
+            <span class="side-label">СУТЬ ПРОГРАММЫ</span>
+            <h2>Каждая неделя должна иметь смысл</h2>
+            <p>
+              Если ты не можешь ответить, зачем у тебя сегодня именно такой объём, такая интенсивность и такая вариация,
+              значит программа собрана вслепую. Нормальный цикл отвечает на три вопроса: что мы сейчас развиваем, как
+              оцениваем готовность и за счёт чего будем выходить на следующий этап.
+            </p>
+            <ul class="feature-list">
+              <li>Накопление строит базу и устойчивость к работе.</li>
+              <li>Интенсификация переводит базу в тяжёлые повторы.</li>
+              <li>Пик временно снижает усталость и даёт показать максимум.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ТРИ ФАЗЫ ЦИКЛА</p>
+            <h2>Нажимай этап и смотри, какая у него логика</h2>
+            <p class="lead">
+              Не все блоки в цикле должны ощущаться одинаково. Где-то ты накапливаешь базу, где-то уже учишься терпеть
+              тяжёлые проценты, а где-то наоборот снижаешь усталость перед тестом или стартом.
+            </p>
+          </div>
+
+          <div class="tab-controls reveal">
+            <button class="filter-btn active" data-tab="acc">Накопление</button>
+            <button class="filter-btn" data-tab="int">Интенсификация</button>
+            <button class="filter-btn" data-tab="peak">Пик</button>
+          </div>
+
+          <div class="tab-panels">
+            <article class="card tab-panel active" data-panel="acc">
+              <h3>Фаза накопления</h3>
+              <p>
+                Здесь задача не удивить себя процентами, а построить базу для будущих тяжёлых недель. Обычно это 4-6
+                недель с умеренной интенсивностью и заметным объёмом. На этом этапе особенно хорошо видны проблемы в
+                технике и слабые места, потому что движения повторяются часто и много.
+              </p>
+              <ul>
+                <li>Рабочий диапазон часто лежит в зоне 60-78%, но важнее ощущение управляемости, чем сама цифра.</li>
+                <li>Повторы чаще 4-8, вариаций немного больше, подсобка играет серьёзную роль.</li>
+                <li>Главная цель: больше качественной работы, выше устойчивость к объёму, чище техника под утомлением.</li>
+                <li>Если на накоплении ты уже едва жив, значит дальше цикл пойдёт криво.</li>
+              </ul>
+            </article>
+            <article class="card tab-panel" data-panel="int">
+              <h3>Фаза интенсификации</h3>
+              <p>
+                На этом этапе база переводится в более тяжёлую специфичную работу. Объём обычно начинает умеренно
+                снижаться, а доля тяжёлых повторов растёт. Важно не перепутать интенсификацию с вечным тестированием.
+              </p>
+              <ul>
+                <li>Типичная зона 75-88%, повторы чаще 2-5, вариативность движений становится ниже.</li>
+                <li>Подсобка остаётся, но её объём уже подчинён главной задаче — сохранить свежесть под тяжёлую работу.</li>
+                <li>Хороший маркер этапа: техника ещё держится, а тяжёлые сеты не выбивают тебя из жизни на несколько дней.</li>
+                <li>Если каждую неделю приходится выживать, а не двигаться по плану, значит вход в фазу был преждевременным.</li>
+              </ul>
+            </article>
+            <article class="card tab-panel" data-panel="peak">
+              <h3>Пиковая фаза</h3>
+              <p>
+                Пик нужен, чтобы временно повысить способность реализовать силу и убрать излишнюю усталость перед тестом.
+                Это не нормальный режим жизни, а короткий управляемый отрезок под конкретную дату.
+              </p>
+              <ul>
+                <li>Чаще используется 85-95% и работа одиночными или двойками в высокой специфике.</li>
+                <li>Общий объём снижается, особенно по подсобке и необязательным вариациям.</li>
+                <li>Техника должна быть максимально узнаваемой и соревновательной.</li>
+                <li>Главная ошибка — пытаться пиковаться слишком долго: форма не держится вечно, зато усталость набегает быстро.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">МИКРОЦИКЛЫ</p>
+            <h2>Как может выглядеть неделя в зависимости от графика</h2>
+            <p class="lead">
+              Универсальной недели нет. Но есть логика: тяжёлые сессии должны разделяться так, чтобы ты успевал их
+              переварить, а повторный контакт с движением усиливал навык, а не размазывал тебя по залу.
+            </p>
+          </div>
+
+          <div class="grid cards-3">
+            <article class="card reveal">
+              <h3>3 дня в неделю</h3>
+              <ul>
+                <li>Д1: присед объём + жим средний + корпус</li>
+                <li>Д2: тяга интенсивная + спина + бицепс бедра</li>
+                <li>Д3: жим интенсивный + присед техничный + лёгкая подсобка</li>
+                <li>Подходит тем, у кого мало времени и нужно держать базовую частоту без перегруза.</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <h3>4 дня в неделю</h3>
+              <ul>
+                <li>Д1: присед тяжело + жим объём</li>
+                <li>Д2: тяга тяжело + задняя цепь</li>
+                <li>Д3: жим тяжело + присед пауза</li>
+                <li>Д4: вариативная тяга + скорость + плечи/кор</li>
+                <li>Самый удобный формат для большинства: есть и частота, и место под восстановление.</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <h3>5 дней в неделю</h3>
+              <ul>
+                <li>Д1: жим объём и техника</li>
+                <li>Д2: присед интенсивный</li>
+                <li>Д3: восстановительный жим + спина</li>
+                <li>Д4: тяга интенсивная</li>
+                <li>Д5: вариации, слабые места, скорость и локальная работа</li>
+                <li>Полезно для опытных атлетов, если быт и сон не рассыпаются.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid cards-2">
+          <article class="card reveal gradient-a">
+            <h3>Правила роста нагрузки</h3>
+            <ol>
+              <li>Не повышай вес только потому, что прошлый сет был «терпимым»; смотри на качество повторений.</li>
+              <li>Тоннаж наращивай ступенчато: лучше 3 ровных недели роста, чем одна героическая и потом откат.</li>
+              <li>Большинство рабочих сетов должно оставлять небольшой запас, чтобы цикл продолжался, а не обрывался.</li>
+              <li>Если тяжёлые подходы начинают резко терять скорость и механику, это уже не развитие, а предупреждение.</li>
+              <li>Разгрузка нужна до поломки, а не после неё.</li>
+            </ol>
+          </article>
+          <article class="card reveal gradient-b">
+            <h3>Авто-регуляция без гадания</h3>
+            <ul>
+              <li>Сон, аппетит и общий тонус просели на несколько дней — урежь объём, а не дави дальше по инерции.</li>
+              <li>Техника рассыпается раньше обычного — снизь вес или убери лишние подходы, чтобы не закреплять мусор.</li>
+              <li>Если плановый вес ощущается легче нормы и движение очень чистое, можно дать небольшой шаг вверх.</li>
+              <li>Если усталость системная, имеет смысл заменить тяжёлый день на техничный, а не надеяться на характер.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ПОД КОГО СОБИРАТЬ ПРОГРАММУ</p>
+            <h2>Уровень атлета меняет не цель, а способ идти к ней</h2>
+            <p class="lead">
+              Новичок, средний и продвинутый атлет могут хотеть один и тот же результат, но вести их к нему надо по-разному.
+            </p>
+          </div>
+
+          <div class="grid cards-4">
+            <article class="card reveal gradient-c">
+              <h3>Новичок</h3>
+              <p>
+                Больше всего выигрывает от частого контакта с базой, простой прогрессии и ровной техники. Не надо мудрить с
+                редкими экстремальными процентами, если человек ещё не научился стабильно двигаться.
+              </p>
+            </article>
+            <article class="card reveal gradient-d">
+              <h3>Средний уровень</h3>
+              <p>
+                Уже нужен более умный баланс между объёмом и интенсивностью. Здесь важнее становятся слабые фазы, вариации,
+                подсобка под конкретные провалы и регулярный контроль усталости.
+              </p>
+            </article>
+            <article class="card reveal gradient-a">
+              <h3>Продвинутый</h3>
+              <p>
+                Часто прибавляет медленнее, но платит за ошибки дороже. Чем сильнее атлет, тем важнее точная дозировка,
+                качество подводки и честное управление восстановлением.
+              </p>
+            </article>
+            <article class="card reveal gradient-b">
+              <h3>Разгрузка</h3>
+              <p>
+                Это не слабость и не «потеря формы». Это часть программы, которая позволяет следующему блоку реально
+                сработать. Урезаешь объём, сохраняешь движение, возвращаешь свежесть.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid cards-3">
+          <article class="card reveal">
+            <h3>Выбор попыток на старт</h3>
+            <p>
+              Первая попытка должна быть такой, чтобы ты забрал её даже на неидеальный день. Вторая — рабочая, третья —
+              уже под задачу. Люди часто сливают соревнования не из-за слабой подготовки, а из-за слишком жадного входа.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3>Что делать за 7-10 дней до теста</h3>
+            <p>
+              Уменьшать общий объём, оставлять ощущение движения, держать привычные ритуалы и не добавлять лишних подвигов.
+              В этот момент уже не строят новую силу, а стараются не помешать её показать.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3>Как понять, что цикл сработал</h3>
+            <p>
+              Не только по рекорду. Смотри на стабильность техники, качество тяжёлых сетов, переносимость объёма и то,
+              насколько ты контролируешь себя на каждом этапе. Сильный цикл делает тебя лучше управляемым атлетом.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ВИДЕО-МОДУЛЬ</p>
+            <h2>Смотреть, как строится цикл в реальности</h2>
+            <p class="lead">
+              Эти материалы лучше всего заходят после чтения: уже понимаешь термины и можешь сопоставить видео с логикой,
+              которую только что разобрал по блокам.
+            </p>
+          </div>
+
+          <div class="video-grid">
+            <article class="video-card reveal"><h3>Периодизация</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Uv_DKDl7EjA" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Линейная и волновая модель</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vthMCtgVtFw" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Пиковая подводка</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wYREQkVtvEc" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Авто-регуляция</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/FWizDhYjGsc" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Как строить микроцикл</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/aclHkVaku9U" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Подсобка для силы</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen></iframe></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid cards-2">
+          <article class="card reveal">
+            <h3>Красные флаги в программе</h3>
+            <ul>
+              <li>Тяжёлые проценты стоят почти каждый день, а разгрузка не предусмотрена.</li>
+              <li>Подсобка размазана по принципу «чтобы было побольше», а не под слабые места.</li>
+              <li>Недельная структура постоянно меняется без причины, поэтому техника не успевает стабилизироваться.</li>
+              <li>Решения принимаются только по эмоции одного дня, без взгляда на весь цикл.</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Как использовать этот раздел</h3>
+            <ol>
+              <li>Сначала определи, в какой фазе цикла ты реально находишься прямо сейчас.</li>
+              <li>Потом сверяй с этой страницей объём, интенсивность и плотность недели.</li>
+              <li>Проверь, достаточно ли восстановления у тебя под такой режим.</li>
+              <li>Если план уже собран, но техника на нём сыпется, вернись в технический раздел и правь источник проблемы.</li>
+            </ol>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer"><div class="container footer-wrap"><p>Powerlifting Academy</p><a href="recovery.html">Далее: восстановление</a></div></footer><script src="script.js"></script>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Железный конспект</p>
+        <a href="recovery.html">Далее: восстановление</a>
+      </div>
+    </footer>
+
+    <button id="toTopBtn" class="to-top" aria-label="Наверх">↑</button>
+    <div id="lightbox" class="lightbox" aria-hidden="true"><img id="lightboxImg" alt="preview" /></div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,21 +1,346 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Powerlifting Academy — Теория</title>
+    <title>Железный конспект - Теория силы</title>
+    <meta
+      name="description"
+      content="Подробная теория пауэрлифтинга без воды: специфичность, объём, интенсивность, утомление, пик формы и логика силового прогресса."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="bg-orb orb-1"></div><div class="bg-orb orb-3"></div>
-    <header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html">Powerlifting Academy</a><button id="menuToggle" class="menu-toggle">☰</button><nav id="mainNav" class="main-nav"><a href="index.html">Главная</a><a class="active" href="theory.html">Теория</a><a href="technique.html">Техника</a><a href="programs.html">Программы</a><a href="recovery.html">Восстановление</a><a href="media.html">Видео и фото</a></nav></div></header>
-    <main class="page-main"><section class="page-hero"><div class="container"><p class="eyebrow">Раздел 1</p><h1>Теория пауэрлифтинга</h1><p class="lead">Здесь собрана расширенная база: что развивает силу, как растёт 1ПМ, какие факторы тормозят прогресс и как их контролировать.</p></div></section>
-      <section class="section"><div class="container"><div class="grid cards-2"><article class="card"><h3>Принципы прогресса</h3><ol><li>Специфичность движений и нервной адаптации.</li><li>Постепенная перегрузка и волнообразность нагрузки.</li><li>Стабильная техника в одинаковых стартовых позициях.</li><li>Баланс тяжёлых и облегчённых недель.</li></ol></article><article class="card"><h3>Состав силы</h3><p>Сила — это комбинация межмышечной координации, скорости рекрутирования моторных единиц, жёсткости корпуса и умения сохранять траекторию штанги.</p><p>Мышечная масса помогает, но без техники и темпа не превращается в соревновательный результат.</p></article></div></div></section>
-      <section class="section section-soft"><div class="container"><h2>Энергетика и утомление</h2><div class="grid cards-3"><article class="card"><h3>АТФ-КФ</h3><p>Главный источник для тяжёлых одиночных/двойных подходов. Нужен длинный отдых и взрывной старт.</p></article><article class="card"><h3>Гликолиз</h3><p>Поддерживает объёмные подсобные упражнения, важен для гипертрофии и устойчивости к объёму.</p></article><article class="card"><h3>Аэробная база</h3><p>Низкоинтенсивное кардио ускоряет восстановление между подходами и тренировками.</p></article></div></div></section>
+  <body data-page="theory">
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="index.html">Железный конспект</a>
+        <button id="menuToggle" class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+        <nav id="mainNav" class="main-nav">
+          <a href="index.html">Главная</a>
+          <a class="active" href="theory.html">Теория</a>
+          <a href="technique.html">Техника</a>
+          <a href="programs.html">Программы</a>
+          <a href="recovery.html">Восстановление</a>
+          <a href="courses.html">Курсы</a>
+          <a href="media.html">Видео и фото</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <div class="container split-grid">
+          <div class="hero-main reveal">
+            <p class="eyebrow">РАЗДЕЛ 1 · ТЕОРИЯ</p>
+            <h1>Сила растёт не от настроения, а от системы</h1>
+            <p class="lead">
+              Если коротко, теория нужна не для умного вида. Она нужна, чтобы понимать, почему один цикл даёт плюс к
+              результату, а другой просто выматывает. Здесь разобрана база силовой подготовки: специфичность, объём,
+              интенсивность, адаптация, усталость, подводка и то, как всё это соединяется в реальный рост цифр на
+              штанге.
+            </p>
+          </div>
+          <aside class="hero-side reveal">
+            <span class="side-label">КЛЮЧЕВАЯ МЫСЛЬ</span>
+            <h2>Хаос не качает силу</h2>
+            <p>
+              Можно очень стараться и всё равно топтаться на месте. Прогресс в пауэрлифтинге появляется, когда ты
+              регулярно повторяешь нужные движения, постепенно наращиваешь нагрузку, не теряешь технику и успеваешь
+              восстановиться. Любая выпавшая часть делает остальное слабее.
+            </p>
+            <ul class="feature-list">
+              <li>Сначала база и качество движения, потом уже большие проценты.</li>
+              <li>Тренировка должна оставлять стимул, а не только следы разрушения.</li>
+              <li>Подъём максимума невозможен без контроля усталости и быта.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="stats-grid">
+            <article class="stat-card reveal"><strong data-counter="4">0</strong><p>основы, без которых цикл развалится</p></article>
+            <article class="stat-card reveal"><strong data-counter="3">0</strong><p>типа адаптации: нейронная, мышечная, техническая</p></article>
+            <article class="stat-card reveal"><strong data-counter="5">0</strong><p>метрик, которые стоит отслеживать каждую неделю</p></article>
+            <article class="stat-card reveal"><strong data-counter="1">0</strong><p>вывод: сила любит последовательность, а не скачки</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ЧЕТЫРЕ ОСНОВЫ</p>
+            <h2>На чём вообще держится результат</h2>
+            <p class="lead">
+              Ниже самый короткий, но честный фундамент. Если хотя бы один пункт здесь у тебя проваливается, остальное
+              тоже начнёт плыть, сколько бы мотивации ты ни накидывал сверху.
+            </p>
+          </div>
+
+          <div class="grid cards-4">
+            <article class="card reveal gradient-a">
+              <h3>Специфичность</h3>
+              <p>
+                Хочешь сильнее присед, жим и тягу — должен регулярно контактировать именно с ними. Вариации полезны, но
+                они не заменяют соревновательные движения. Чем ближе старт или тест, тем выше должна быть доля именно тех
+                паттернов, которые ты собираешься показывать на помосте.
+              </p>
+            </article>
+            <article class="card reveal gradient-b">
+              <h3>Перегрузка</h3>
+              <p>
+                Нагрузка должна расти, но не истерично. Вес, тоннаж, плотность, сложность вариаций — всё это инструменты.
+                Если повышать всё сразу, система быстро ломается. Хорошая перегрузка ощущается как управляемое усиление,
+                а не как попытка выжить на каждом подходе.
+              </p>
+            </article>
+            <article class="card reveal gradient-c">
+              <h3>Утомление</h3>
+              <p>
+                Усталость не враг, а цена за стимул. Вопрос не в том, устал ли ты, а в том, управляешь ли ты этим. Если
+                объём накопился, а сон и скорость штанги просели, дальше нужен не героизм, а корректировка нагрузки.
+              </p>
+            </article>
+            <article class="card reveal gradient-d">
+              <h3>Восстановление</h3>
+              <p>
+                Сила не прибавляется в момент самого тяжёлого повтора. Она прибавляется после него, если организму дали
+                восстановить ткани, нервную систему и общее состояние. Отсюда простая истина: режим — часть программы,
+                а не приятное дополнение.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid cards-2">
+          <article class="card reveal">
+            <h3>Как сила растёт на практике</h3>
+            <p>
+              В начале цикла заметная часть прогресса часто идёт от улучшения координации и повторяемости движения.
+              Штанга идёт чище, ты лучше чувствуешь опору, увереннее держишь брейсинг и перестаёшь сливать силу в пустые
+              движения. На более длинной дистанции подключается мышечная база, растёт устойчивость к объёму и способность
+              держать тяжёлую технику без распада.
+            </p>
+            <p>
+              Отсюда важный вывод: не надо выбирать что-то одно между техникой, мышцами и тяжёлыми весами. Прогресс — это
+              связка. Новичок сильнее прибавляет за счёт обучения движению, более опытный лифтер больше зависит от тонкой
+              настройки объёма, слабых мест и восстановления, но принцип всё равно тот же.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3>Что считать каждую неделю</h3>
+            <ul>
+              <li>Среднюю интенсивность по главным движениям, чтобы понимать, не скатился ли цикл в вечный тест.</li>
+              <li>Общий тоннаж по приседу, жиму и тяге, чтобы видеть, откуда берётся усталость.</li>
+              <li>Количество тяжёлых подходов выше 80-85%, потому что именно они сильнее всего бьют по восстановлению.</li>
+              <li>Скорость и чистоту техники на стандартных весах, а не только на рекордных подходах.</li>
+              <li>Сон, аппетит, фон усталости и готовность, чтобы не упустить момент, когда пора резать объём.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ТРИ КАНАЛА АДАПТАЦИИ</p>
+            <h2>Почему одна и та же программа по-разному работает у разных людей</h2>
+            <p class="lead">
+              Потому что у каждого атлета в разной степени ограничены разные вещи. У одного не хватает мышечной базы, у
+              другого техника сыпется под усталостью, у третьего нервная система и быт не выдерживают слишком частых
+              тяжёлых стимулов.
+            </p>
+          </div>
+
+          <div class="data-grid">
+            <article class="card reveal">
+              <h3>Нейронная адаптация</h3>
+              <p>
+                Это умение быстро и точно включать нужные мышечные группы в нужной последовательности. Тяжёлые синглы,
+                двойки и тройки при хорошем контроле техники поддерживают её отлично. Но если злоупотреблять ими без
+                базы, они съедят восстановление быстрее, чем принесут пользу.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Мышечная база</h3>
+              <p>
+                Чем больше мышечный потенциал в нужных зонах, тем выше потолок силы. Поэтому фазы накопления и подсобка
+                не являются чем-то второстепенным. Квадрицепс, ягодицы, спина, трицепс, грудь, задняя цепь — всё это не
+                косметика, а реальный материал для будущих килограммов.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Техническая адаптация</h3>
+              <p>
+                Способность воспроизводить одну и ту же механику под разным уровнем нагрузки. Именно поэтому лёгкие и
+                средние веса тоже имеют значение: на них закатывается паттерн, который потом должен остаться и под 90%.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid cards-2">
+          <article class="card reveal gradient-a">
+            <h3>Когда повышать интенсивность</h3>
+            <p>
+              Интенсивность имеет смысл поднимать, когда накопленная база уже позволяет тебе держать форму движения и
+              адекватно восстанавливаться между тяжёлыми сессиями. Если техника на 70-75% уже плывёт, то ранний переход к
+              85-90% лишь закрепит ошибки. Нормальный признак готовности к интенсификации — стабильная техника, понятный
+              ритм восстановления и отсутствие системной усталости на базовых неделях.
+            </p>
+          </article>
+          <article class="card reveal gradient-b">
+            <h3>Когда нужен пик, а когда он лишний</h3>
+            <p>
+              Пиковая фаза нужна под старт, тест или конкретную контрольную дату. Если ты каждые две недели пытаешься
+              жить в зоне максимальных процентов, это уже не пик, а дурная привычка. Смысл пика в том, чтобы временно
+              превратить накопленную базу в максимально выраженный результат, а не существовать в этом режиме круглый год.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">МИФЫ</p>
+            <h2>Что красиво звучит, но часто мешает</h2>
+            <p class="lead">
+              У силовиков полно идей, которые выглядят брутально, но плохо работают на длинной дистанции. Ниже самые
+              частые заблуждения, которые тормозят рост.
+            </p>
+          </div>
+
+          <div class="grid cards-3">
+            <article class="card reveal gradient-c">
+              <h3>«Чем чаще максимум, тем быстрее прогресс»</h3>
+              <p>
+                Максимум показывает текущую реализацию силы, но почти не строит базу сам по себе. Если тестировать себя
+                слишком часто, можно очень быстро перестать тренироваться и начать просто уставать.
+              </p>
+            </article>
+            <article class="card reveal gradient-d">
+              <h3>«Подсобка не нужна, нужен только соревновательный стиль»</h3>
+              <p>
+                Если слабое место не закрыто мышечно и технически, соревновательное движение будет снова и снова упираться
+                в одну и ту же дыру. Подсобка нужна не ради объёма как такового, а ради поддержки конкретного звена.
+              </p>
+            </article>
+            <article class="card reveal gradient-a">
+              <h3>«Если тяжело, значит эффективно»</h3>
+              <p>
+                Тяжесть сама по себе ничего не гарантирует. Эффективная работа — это стимул, который можно переварить,
+                повторить и встроить в цикл. Неразумно тяжёлая работа часто оставляет только красивое ощущение добитости.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ВИДЕО-МОДУЛЬ</p>
+            <h2>Разобрать теорию глазами, а не только текстом</h2>
+            <p class="lead">
+              Эти ролики лучше смотреть с вопросом в голове: что именно здесь влияет на рост силы, какой этап цикла
+              показан, зачем выбран такой характер нагрузки и как это можно перенести на свою подготовку.
+            </p>
+          </div>
+
+          <div class="video-grid">
+            <article class="video-card reveal"><h3>Теория приседа</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/aclHkVaku9U" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Теория жима</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Теория тяги</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/p2OPUi4xGrM" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Периодизация и этапы цикла</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Uv_DKDl7EjA" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Авто-регуляция и RPE</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vthMCtgVtFw" allowfullscreen></iframe></div></article>
+            <article class="video-card reveal"><h3>Подводка к тяжёлому тесту</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wYREQkVtvEc" allowfullscreen></iframe></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">ВИЗУАЛЬНЫЙ АТЛАС</p>
+            <h2>Картинки тоже учат, если смотреть с головой</h2>
+            <p class="lead">
+              По фото хорошо видно контекст: как атлет держит корпус, как выглядит подготовка к тяжёлому подходу, как
+              устроена атмосфера силовой сессии и где обычно считывается усталость ещё до того, как начался сам сет.
+            </p>
+          </div>
+
+          <div class="image-grid">
+            <figure class="image-card reveal">
+              <img class="zoomable" src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1400&q=80" alt="Работа со штангой" />
+              <figcaption>Техника строится не только на усилии, но и на повторяемости одного и того же паттерна.</figcaption>
+            </figure>
+            <figure class="image-card reveal">
+              <img class="zoomable" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1400&q=80" alt="Силовой зал" />
+              <figcaption>Объёмная силовая работа создаёт базу, на которую потом накладывается тяжёлая реализация.</figcaption>
+            </figure>
+            <figure class="image-card reveal">
+              <img class="zoomable" src="https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?auto=format&fit=crop&w=1400&q=80" alt="Подготовка к сету" />
+              <figcaption>Перед тяжёлым подъёмом важны ясность задачи и контроль ритуала, а не суета ради вида.</figcaption>
+            </figure>
+            <figure class="image-card reveal">
+              <img class="zoomable" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1400&q=80" alt="Скоростная работа" />
+              <figcaption>Скоростные и средние веса помогают понять, насколько чисто работает твоя механика.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid cards-2">
+          <article class="card reveal">
+            <h3>Шпаргалка по теории</h3>
+            <ul>
+              <li>Сначала строишь повторяемость и мышечную базу, потом повышаешь долю тяжёлой специфики.</li>
+              <li>Любой рост нагрузки должен быть управляемым, а не эмоциональным.</li>
+              <li>Усталость нужно не бояться, а учитывать и направлять.</li>
+              <li>Пиковая форма временна; база строится дольше и ценнее.</li>
+              <li>Если нет восстановления, то нет и полноценной адаптации.</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Что делать после этого раздела</h3>
+            <ol>
+              <li>Сверь свои последние 4-6 недель тренировок с тем, что ты только что прочитал.</li>
+              <li>Пойми, где у тебя перекос: слишком мало специфики, слишком много тяжёлых процентов или плохой режим.</li>
+              <li>Перейди в раздел техники и проверь, не размножал ли ты объёмом неправильный паттерн.</li>
+              <li>Потом уже иди в программы и строй цикл на понятной теоретической базе.</li>
+            </ol>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer"><div class="container footer-wrap"><p>Powerlifting Academy</p><a href="technique.html">Далее: техника</a></div></footer><script src="script.js"></script>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Железный конспект</p>
+        <a href="technique.html">Далее: техника</a>
+      </div>
+    </footer>
+
+    <button id="toTopBtn" class="to-top" aria-label="Наверх">↑</button>
+    <div id="lightbox" class="lightbox" aria-hidden="true"><img id="lightboxImg" alt="preview" /></div>
+    <script src="script.js"></script>
   </body>
 </html>
