@@ -1,32 +1,22 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Powerlifting Academy — Видео и фото</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="bg-orb orb-1"></div><div class="bg-orb orb-3"></div>
-    <header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html">Powerlifting Academy</a><button id="menuToggle" class="menu-toggle">☰</button><nav id="mainNav" class="main-nav"><a href="index.html">Главная</a><a href="theory.html">Теория</a><a href="technique.html">Техника</a><a href="programs.html">Программы</a><a href="recovery.html">Восстановление</a><a class="active" href="media.html">Видео и фото</a></nav></div></header>
-    <main class="page-main"><section class="page-hero"><div class="container"><p class="eyebrow">Раздел 5</p><h1>Медиатека: видео и визуальные референсы</h1><p class="lead">Больше обучающих видео для анализа техники и соревновательной подготовки.</p></div></section>
-      <section class="section"><div class="container"><div class="video-grid">
-        <article class="video-card"><h3>Присед: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/aclHkVaku9U" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Жим: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Тяга: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/p2OPUi4xGrM" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Присед: детали</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Uv_DKDl7EjA" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Жим: ошибки</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vthMCtgVtFw" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Тяга: разбор</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wYREQkVtvEc" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Подготовка к старту</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/J8l5v8MRTvA" allowfullscreen></iframe></div></article>
-        <article class="video-card"><h3>Психология подхода</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/FWizDhYjGsc" allowfullscreen></iframe></div></article>
-      </div>
-      <div class="image-grid">
-        <figure class="image-card"><img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1200&q=80" alt="Жим лёжа" /><figcaption>Стартовая фиксация в жиме.</figcaption></figure>
-        <figure class="image-card"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Силовая тренировка" /><figcaption>Подготовка к тяжёлому подходу.</figcaption></figure>
-        <figure class="image-card"><img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=1200&q=80" alt="Становая тяга" /><figcaption>Контроль спины и траектории.</figcaption></figure>
-      </div></div></section>
-    </main>
-    <footer class="site-footer"><div class="container footer-wrap"><p>Powerlifting Academy</p><a href="index.html">На главную</a></div></footer><script src="script.js"></script>
-  </body>
-</html>
+<!doctype html><html lang="ru"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Powerlifting Academy — Видео и фото</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" /><link rel="stylesheet" href="styles.css" /></head>
+<body data-page="media"><div class="scroll-progress" id="scrollProgress"></div><div class="bg-orb orb-1"></div><div class="bg-orb orb-3"></div>
+<header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html">Powerlifting Academy</a><button id="menuToggle" class="menu-toggle" aria-expanded="false">☰</button><nav id="mainNav" class="main-nav"><a href="index.html">Главная</a><a href="theory.html">Теория</a><a href="technique.html">Техника</a><a href="programs.html">Программы</a><a href="recovery.html">Восстановление</a><a class="active" href="media.html">Видео и фото</a></nav></div></header>
+<main class="page-main"><section class="page-hero"><div class="container reveal"><p class="eyebrow">Раздел 5</p><h1>Медиатека</h1><p class="lead">Фильтруй ролики по категориям и кликай по фото для полноэкранного просмотра.</p></div></section>
+<section class="section"><div class="container"><div class="tab-controls reveal"><button class="filter-btn active" data-filter="all">Все</button><button class="filter-btn" data-filter="squat">Присед</button><button class="filter-btn" data-filter="bench">Жим</button><button class="filter-btn" data-filter="deadlift">Тяга</button><button class="filter-btn" data-filter="mindset">Подготовка</button></div>
+<div class="video-grid">
+<article class="video-card reveal" data-cat="squat"><h3>Присед: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/aclHkVaku9U" allowfullscreen></iframe></div></article>
+<article class="video-card reveal" data-cat="bench"><h3>Жим: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen></iframe></div></article>
+<article class="video-card reveal" data-cat="deadlift"><h3>Тяга: база</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/p2OPUi4xGrM" allowfullscreen></iframe></div></article>
+<article class="video-card reveal" data-cat="squat"><h3>Присед: детали</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Uv_DKDl7EjA" allowfullscreen></iframe></div></article>
+<article class="video-card reveal" data-cat="bench"><h3>Жим: ошибки</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vthMCtgVtFw" allowfullscreen></iframe></div></article>
+<article class="video-card reveal" data-cat="deadlift"><h3>Тяга: разбор</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wYREQkVtvEc" allowfullscreen></iframe></div></article>
+<article class="video-card reveal" data-cat="mindset"><h3>Подготовка к старту</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/J8l5v8MRTvA" allowfullscreen></iframe></div></article>
+<article class="video-card reveal" data-cat="mindset"><h3>Психология подхода</h3><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/FWizDhYjGsc" allowfullscreen></iframe></div></article>
+</div>
+<div class="image-grid">
+<figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1200&q=80" alt="Жим лёжа" /><figcaption>Стартовая фиксация в жиме.</figcaption></figure>
+<figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Силовая тренировка" /><figcaption>Подготовка к тяжёлому подходу.</figcaption></figure>
+<figure class="image-card reveal"><img class="zoomable" src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=1200&q=80" alt="Становая тяга" /><figcaption>Контроль спины и траектории.</figcaption></figure>
+</div></div></section></main>
+<footer class="site-footer"><div class="container footer-wrap"><p>Powerlifting Academy</p><a href="index.html">На главную</a></div></footer>
+<button id="toTopBtn" class="to-top" aria-label="Наверх">↑</button><div id="lightbox" class="lightbox" aria-hidden="true"><img id="lightboxImg" alt="preview" /></div><script src="script.js"></script></body></html>

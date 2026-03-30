@@ -1,19 +1,8 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Powerlifting Academy — Программы</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="bg-orb orb-1"></div><div class="bg-orb orb-2"></div>
-    <header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html">Powerlifting Academy</a><button id="menuToggle" class="menu-toggle">☰</button><nav id="mainNav" class="main-nav"><a href="index.html">Главная</a><a href="theory.html">Теория</a><a href="technique.html">Техника</a><a class="active" href="programs.html">Программы</a><a href="recovery.html">Восстановление</a><a href="media.html">Видео и фото</a></nav></div></header>
-    <main class="page-main"><section class="page-hero"><div class="container"><p class="eyebrow">Раздел 3</p><h1>Периодизация и шаблоны программ</h1><p class="lead">Подготовка от базового накопления до соревновательного пика.</p></div></section>
-      <section class="section"><div class="container"><div class="timeline"><div><h3>1–4 недели</h3><p>Объём 60–75%, рост техники и мышечной базы.</p></div><div><h3>5–8 недели</h3><p>Интенсификация 75–87%, акцент на силе.</p></div><div><h3>9–11 недели</h3><p>Пикирование 85–95%, одиночные подходы.</p></div><div><h3>12 неделя</h3><p>Тейпер, снижение утомления перед стартом.</p></div></div></div></section>
-      <section class="section section-soft"><div class="container grid cards-2"><article class="card"><h3>Пример недели (4 дня)</h3><ul><li>Д1: тяжёлый присед + жим объём.</li><li>Д2: тяга тяжёлая + задняя цепь.</li><li>Д3: жим тяжёлый + паузный присед.</li><li>Д4: вариативная тяга + ГПП.</li></ul></article><article class="card"><h3>RPE-регуляция</h3><p>Если день тяжёлый по самочувствию — снижай вес на 2.5–7.5% и сохраняй техническое качество. Цель — стабильная серия продуктивных недель.</p></article></div></div></section>
-    </main>
-    <footer class="site-footer"><div class="container footer-wrap"><p>Powerlifting Academy</p><a href="recovery.html">Далее: восстановление</a></div></footer><script src="script.js"></script>
-  </body>
-</html>
+<!doctype html><html lang="ru"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Powerlifting Academy — Программы</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" /><link rel="stylesheet" href="styles.css" /></head>
+<body data-page="programs"><div class="scroll-progress" id="scrollProgress"></div><div class="bg-orb orb-1"></div><div class="bg-orb orb-2"></div>
+<header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html">Powerlifting Academy</a><button id="menuToggle" class="menu-toggle" aria-expanded="false">☰</button><nav id="mainNav" class="main-nav"><a href="index.html">Главная</a><a href="theory.html">Теория</a><a href="technique.html">Техника</a><a class="active" href="programs.html">Программы</a><a href="recovery.html">Восстановление</a><a href="media.html">Видео и фото</a></nav></div></header>
+<main class="page-main"><section class="page-hero"><div class="container reveal"><p class="eyebrow">Раздел 3</p><h1>Периодизация и планирование</h1><p class="lead">Выбери фазу подготовки и получи акценты тренинга.</p></div></section>
+<section class="section"><div class="container"><div class="tab-controls reveal"><button class="filter-btn active" data-tab="acc">Накопление</button><button class="filter-btn" data-tab="int">Интенсификация</button><button class="filter-btn" data-tab="peak">Пик</button></div><div class="tab-panels"><article class="card tab-panel active" data-panel="acc"><h3>Недели 1–4</h3><p>60–75%, объём и техника, много подходов в рабочих диапазонах.</p></article><article class="card tab-panel" data-panel="int"><h3>Недели 5–8</h3><p>75–87%, снижение объёма, рост интенсивности и соревновательной специфики.</p></article><article class="card tab-panel" data-panel="peak"><h3>Недели 9–12</h3><p>85–95%, тяжёлые синглы, тейпер и подводка к старту.</p></article></div></div></section>
+<section class="section section-soft"><div class="container grid cards-2"><article class="card reveal"><h3>Микроцикл 4 дня</h3><ul><li>Д1: присед тяж + жим объём</li><li>Д2: тяга тяж + задняя цепь</li><li>Д3: жим тяж + присед пауза</li><li>Д4: вариативная тяга + ОФП</li></ul></article><article class="card reveal"><h3>Авто-регуляция</h3><p>Отслеживай RPE/RIR: если скорость штанги падает раньше плана — снижай тоннаж, но сохраняй качественную технику.</p></article></div></section></main>
+<footer class="site-footer"><div class="container footer-wrap"><p>Powerlifting Academy</p><a href="recovery.html">Далее: восстановление</a></div></footer>
+<button id="toTopBtn" class="to-top" aria-label="Наверх">↑</button><div id="lightbox" class="lightbox" aria-hidden="true"><img id="lightboxImg" alt="preview" /></div><script src="script.js"></script></body></html>

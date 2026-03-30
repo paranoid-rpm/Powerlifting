@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Powerlifting Academy — Главная</title>
-    <meta name="description" content="Многостраничное учебное пособие по пауэрлифтингу: теория, техника, программы, восстановление и медиатека." />
+    <meta name="description" content="Интерактивное многостраничное учебное пособие по пауэрлифтингу." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="home">
+    <div class="scroll-progress" id="scrollProgress"></div>
     <div class="bg-orb orb-1"></div>
     <div class="bg-orb orb-2"></div>
+
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="logo" href="index.html">Powerlifting Academy</a>
-        <button id="menuToggle" class="menu-toggle" aria-label="Открыть меню">☰</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
         <nav id="mainNav" class="main-nav">
           <a class="active" href="index.html">Главная</a>
           <a href="theory.html">Теория</a>
@@ -30,38 +32,49 @@
 
     <main>
       <section class="hero">
-        <div class="container hero-content">
-          <p class="eyebrow">Многостраничное учебное пособие</p>
-          <h1>Пауэрлифтинг: системный путь к силе и спортивному прогрессу</h1>
-          <p class="lead">Красочный современный сайт с детальной теорией, методикой тренировок, техникой движения, продуманной компоновкой контента и большой медиатекой.</p>
+        <div class="container hero-content reveal">
+          <p class="eyebrow">Интерактивное учебное пособие</p>
+          <h1>Пауэрлифтинг: мощная теория + практика + инструменты прогресса</h1>
+          <p class="lead">Мы сделали сайт более живым: анимации, интерактивные калькуляторы, фильтры, генератор плана и умная компоновка материалов.</p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="theory.html">Изучать теорию</a>
-            <a class="btn btn-secondary" href="media.html">Открыть видеотеку</a>
+            <a class="btn btn-primary" href="theory.html">Начать обучение</a>
+            <a class="btn btn-secondary" href="media.html">Смотреть видео</a>
           </div>
           <div class="pill-row">
-            <span>6 разделов</span><span>20+ тематических блоков</span><span>8 видео</span><span>адаптивный UI</span>
+            <span><b data-counter="6">0</b> разделов</span>
+            <span><b data-counter="30">0</b>+ блоков теории</span>
+            <span><b data-counter="8">0</b> видео</span>
+            <span><b data-counter="100">0</b>% практики</span>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <h2>Структура пособия</h2>
-          <div class="grid cards-3">
-            <article class="card gradient-a">
-              <h3>Теоретическая база</h3>
-              <p>Биомеханика, адаптация, тренировочные принципы, энергетические системы и логика силового прогресса.</p>
-              <a class="text-link" href="theory.html">Перейти →</a>
+          <h2 class="reveal">Быстрые инструменты атлета</h2>
+          <div class="grid cards-2">
+            <article class="card reveal">
+              <h3>Калькулятор 1ПМ</h3>
+              <form id="ormForm" class="stack-form">
+                <label>Вес (кг)<input type="number" id="weightInput" min="1" required /></label>
+                <label>Повторения<input type="number" id="repsInput" min="1" max="12" required /></label>
+                <button class="btn btn-primary" type="submit">Рассчитать</button>
+              </form>
+              <p id="ormResult" class="muted">Введи данные, чтобы получить ориентировочный 1ПМ.</p>
             </article>
-            <article class="card gradient-b">
-              <h3>Практика и техника</h3>
-              <p>Пошаговые алгоритмы приседа, жима и тяги, типовые ошибки и способы оперативной коррекции.</p>
-              <a class="text-link" href="technique.html">Перейти →</a>
-            </article>
-            <article class="card gradient-c">
-              <h3>Планирование цикла</h3>
-              <p>Периодизация, примеры недель, RPE-авторегуляция, пикирование формы и подготовка к старту.</p>
-              <a class="text-link" href="programs.html">Перейти →</a>
+            <article class="card reveal">
+              <h3>Генератор мини-плана на неделю</h3>
+              <form id="planForm" class="stack-form">
+                <label>Уровень
+                  <select id="levelInput">
+                    <option value="beginner">Новичок</option>
+                    <option value="intermediate">Средний</option>
+                    <option value="advanced">Продвинутый</option>
+                  </select>
+                </label>
+                <button class="btn btn-secondary" type="submit">Сгенерировать</button>
+              </form>
+              <ul id="planResult" class="muted"></ul>
             </article>
           </div>
         </div>
@@ -69,20 +82,11 @@
 
       <section class="section section-soft">
         <div class="container">
-          <h2>Почему эта версия лучше</h2>
-          <div class="split">
-            <div class="card">
-              <ul>
-                <li>Многостраничная архитектура — удобная навигация и меньше перегрузки.</li>
-                <li>Более яркий визуальный стиль: орбы, градиенты, цветовые акценты, карточки.</li>
-                <li>Улучшенная компоновка: читаемые блоки, таймлайны, таблицы и FAQ.</li>
-                <li>Расширенный медиараздел с несколькими обучающими роликами.</li>
-              </ul>
-            </div>
-            <figure class="card media-preview">
-              <img src="https://images.unsplash.com/photo-1517963628607-235ccdd5476c?auto=format&fit=crop&w=1400&q=80" alt="Силовая тренировка в зале" />
-              <figcaption>Современный визуальный стиль и практическая подача материала.</figcaption>
-            </figure>
+          <h2 class="reveal">Что нового в дизайне и UX</h2>
+          <div class="grid cards-3">
+            <article class="card gradient-a reveal tilt"><h3>Живая анимация</h3><p>Reveal-эффекты при скролле, анимированные счётчики и плавные переходы элементов.</p></article>
+            <article class="card gradient-b reveal tilt"><h3>Больше интерактива</h3><p>Калькуляторы, генератор недельного шаблона, фильтрация видео и просмотр изображений в лайтбоксе.</p></article>
+            <article class="card gradient-c reveal tilt"><h3>Лучше компоновка</h3><p>Контент разделён на страницы по смыслу, чтение стало проще и быстрее.</p></article>
           </div>
         </div>
       </section>
@@ -91,9 +95,12 @@
     <footer class="site-footer">
       <div class="container footer-wrap">
         <p>© 2026 Powerlifting Academy</p>
-        <a href="media.html">Смотреть видео</a>
+        <a href="media.html">Перейти к медиатеке</a>
       </div>
     </footer>
+
+    <button id="toTopBtn" class="to-top" aria-label="Наверх">↑</button>
+    <div id="lightbox" class="lightbox" aria-hidden="true"><img id="lightboxImg" alt="preview" /></div>
     <script src="script.js"></script>
   </body>
 </html>
